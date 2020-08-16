@@ -1,8 +1,8 @@
-sudo /sbin/fdisk -L
+sudo /sbin/fdisk -l
 
-echo "PRESS ENTER 4 TIMES!!!"
+echo "TYPE 'n' and then PRESS ENTER 5 TIMES!!!"
 
-sudo /sbin/fdisk /dev/sdb3
+sudo /sbin/fdisk /dev/sdb
 
 echo "TYPE w and hit enter!!!"
 
