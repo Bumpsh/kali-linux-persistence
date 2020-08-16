@@ -1,12 +1,10 @@
 sudo /sbin/fdisk -l
 
-echo "TYPE 'n' and then PRESS ENTER 5 TIMES!!!"
+echo "TYPE 'n' and then PRESS ENTER 5 TIMES!!! then type w and hit enter"
 
 sudo /sbin/fdisk /dev/sdb
 
-echo "TYPE w and hit enter!!!"
-
-sudo /sbin/fdisk -L
+sudo /sbin/fdisk -l
 
 sudo mkfs.ext4 -L persistence /dev/sdb3
 
