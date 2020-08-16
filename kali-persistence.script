@@ -1,0 +1,24 @@
+sudo /sbin/fdisk -L
+
+echo "PRESS ENTER 4 TIMES!!!"
+
+sudo /sbin/fdisk /dev/sdb3
+
+echo "TYPE w and hit enter!!!"
+
+sudo /sbin/fdisk -L
+
+sudo mkfs.ext4 -L persistence /dev/sdb3
+
+sudo e2label /dev/sdb3 persistence
+
+sudo mkdir -p /mnt/user
+
+sudo mount /dev/sdb3 /mnt/user
+
+echo "/ union" > /mnt/user/persistence.conf
+
+sudo umount /dev/sdb3
+
+echo "DONE!!"
+
